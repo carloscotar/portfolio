@@ -34,6 +34,10 @@ export class Preloader extends Scene
 
         this.load.image('logo', 'logo.png');
         this.load.image('star', 'star.png');
+        this.load.spritesheet('carlos', 'character.png', {
+            frameWidth: 192,
+            frameHeight: 192
+        })
     }
 
     create ()
