@@ -10,8 +10,10 @@ import { Room } from './scenes/Room';
 //  https://newdocs.phaser.io/docs/3.70.0/Phaser.Types.Core.GameConfig
 const config: Phaser.Types.Core.GameConfig = {
     type: AUTO,
-    width: 1024,
-    height: 512,
+    // width: 1024,
+    width: document.body.clientWidth,
+    // height: 512,
+    height: document.body.clientHeight,
     parent: 'game-container',
     backgroundColor: '#028af8',
     scene: [
@@ -23,7 +25,7 @@ const config: Phaser.Types.Core.GameConfig = {
         Room
     ],
     scale: {
-        // mode: Phaser.Scale.RESIZE,
+        mode: Phaser.Scale.RESIZE,
         autoCenter: Phaser.Scale.CENTER_BOTH,
     },
     physics: {
